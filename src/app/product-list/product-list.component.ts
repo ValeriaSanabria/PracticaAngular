@@ -8,11 +8,15 @@ import { products } from '../products';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent {
-  products = products;
 
-  //lo declaro en el event del html
+  products = [...products];
+//lo declaro en el event del html
   share() {
     window.alert('The product has been shared!');
+  }
+
+  onNotify() {
+    window.alert('You will be notified when the product goes on sale');
   }
 }
 
